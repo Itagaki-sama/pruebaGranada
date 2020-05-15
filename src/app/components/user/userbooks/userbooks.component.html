@@ -1,0 +1,16 @@
+<!-- <ul class="">
+  <li class="" routerLinkActive="active">
+    <button (click)="createBook()">New book</button>
+
+  </li>
+</ul> -->
+<!-- <a class="" [routerLink]="['create']">New book</a> -->
+<div class="books-container">
+  <app-bookcards
+    [image]="getBookImage(book.ID)"
+    [book]="book"
+    *ngFor="let book of books"
+    (click)="seeBook(book.ID)"
+  ></app-bookcards>
+</div>
+<router-outlet></router-outlet>

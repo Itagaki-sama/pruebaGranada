@@ -1,0 +1,32 @@
+<div class="">
+  <div class="img-container">
+    <img
+      [src]="image"
+      (error)="setDefaultImg()"
+      class="card-img-top"
+      alt="..."
+    />
+  </div>
+  <div class="controls-container">
+    <div class="">
+      <label>Título</label>
+      <label>{{ book.Title }}</label>
+    </div>
+    <div class="">
+      <label>Fecha</label>
+      <label>{{ book.PublishDate }}</label>
+    </div>
+    <div class="">
+      <label>Nº de páginas</label>
+      <label>{{ book.PageCount }}</label>
+    </div>
+    <div class="">
+      <label>Descripción</label>
+      <label>{{ book.Description }}</label>
+    </div>
+    <div class="">
+      <label>Extracto</label>
+      <label>{{ book.Excerpt }}</label>
+    </div>
+  </div>
+</div>

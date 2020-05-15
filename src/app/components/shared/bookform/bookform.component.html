@@ -1,0 +1,109 @@
+<div class="form-container">
+  <form autocomplete="off" [formGroup]="bookInputs" (ngSubmit)="guardar()">
+    <div>
+      <div class="image-container">
+        <div class="image">
+          <img
+            [src]="setDefaultImg()"
+            lass="img"
+            width="200"
+            height="300"
+            alt="Portada"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="form-label">Cargar imagen</label>
+        <div class="">
+          <!-- [class.is-invalid]="forma.get('nombre').invalid && forma.get('nombre').touched" -->
+          <input
+            class="form-control"
+            type="file"
+            placeholder=""
+            formControlName="imagen"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="form-label">*Título</label>
+        <div class="">
+          <input
+            class="form-control"
+            type="text"
+            placeholder=""
+            formControlName="title"
+            [class.is-invalid]="tileInvalido"
+          />
+          <!-- <small *ngIf="tileInvalido" class="form-text text-danger"
+          >Campo obligatorio.</small
+        > -->
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-2 col-form-label">*Fecha</label>
+        <div class="">
+          <input
+            class="form-control"
+            type="date"
+            placeholder=""
+            formControlName="publishDate"
+            [class.is-invalid]="publishDateInvalido"
+          />
+          <!-- <small *ngIf="publishDateInvalido" class="form-text text-danger"
+          >Campo obligatorio.</small
+        > -->
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Nº páginas</label>
+      <div class="col-8">
+        <input
+          class="form-control"
+          type="number"
+          placeholder=""
+          formControlName="pageCount"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">*Descripción</label>
+      <div class="col-8">
+        <input
+          class="form-control"
+          type="text"
+          placeholder=""
+          formControlName="description"
+          [class.is-invalid]="descriptionInvalido"
+        />
+        <!-- <small *ngIf="descriptionInvalido" class="form-text text-danger"
+        >Campo obligatorio</small
+      > -->
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Extracto</label>
+      <div class="col-8">
+        <textarea
+          class="form-control"
+          type="text"
+          placeholder=""
+          formControlName="excerpt"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="input-group col-md-8">
+        <button type="submit" class="">
+          Guardar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<div></div>

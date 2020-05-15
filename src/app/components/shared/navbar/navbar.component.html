@@ -1,0 +1,40 @@
+<nav class="">
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['books']">Books</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['user', 1]">User</a>
+    </li>
+    <ul class="">
+      <li class="" routerLinkActive="active">
+        <a class="" [routerLink]="['user', 1, 'info']">User info</a>
+      </li>
+      <li class="" routerLinkActive="active">
+        <a class="" [routerLink]="['user', 1, 'books']">User books</a>
+      </li>
+    </ul>
+    <ul class="">
+      <li class="" routerLinkActive="active">
+        <a class="" [routerLink]="['user', 1, 'create']">New book</a>
+      </li>
+    </ul>
+  </ul>
+  <span class=""></span>
+</nav>
+<!-- <div class="container">
+  <div id="navigation-bar">
+    <nav>
+      <ul>
+        <li routerLinkActive="active">
+          <a [routerLink]="['books']">Books</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['user', 1]">User</a>
+        </li>
+        <a href="#" id="menu-icon"></a>
+      </ul>
+    </nav>
+  </div>
+</div> -->
+<router-outlet></router-outlet>

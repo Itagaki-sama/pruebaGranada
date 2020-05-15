@@ -1,0 +1,14 @@
+<div class="">
+  <div ng-mouseover="hoverIn()">
+    <img
+      [src]="image"
+      (error)="setDefaultImg()"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="">
+      <h3 class="card-title">{{ book.Title }}</h3>
+      <small>{{ book.PublishDate | date: "y" }}</small>
+    </div>
+  </div>
+</div>
